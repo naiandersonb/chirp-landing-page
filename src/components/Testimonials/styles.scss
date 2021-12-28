@@ -1,0 +1,111 @@
+$bg-color: #D7F5F5;
+$bg-card-color: #fff;
+$twitter-logo-color: #1DA1F2;
+$like-icon-color: #E01A1A;
+$text-color: #737373;
+
+#testimonials {
+    width: 100%;
+    background-color: $bg-color;
+    padding: 100px 0;
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 58px;
+
+            margin-bottom: 72px;
+        }
+
+        .tweet_container {
+            display: flex;
+            gap: 25px;
+
+
+            .tweet_card {
+                width: 490px;
+                height: 100%;
+                background-color: $bg-card-color;
+                padding: 35px;
+
+                display: flex;
+                flex-direction: column;
+
+                border-radius: 10px;
+
+                .card_header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    margin-bottom: 29px;
+
+                    .avatar {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        img {
+                            width: 60px;
+                            height: 60px;
+                        }
+
+                        .avatar_info {
+                            h3 {
+                                font-size: 24px;
+                                font-weight: 400;
+                                line-height: 30px;
+                            }
+
+                            span {
+                                font-size: 18px;
+                                font-weight: 400;
+                                line-height: 21px;
+                                color: $text-color;
+                            }
+                        }
+
+                    }
+
+                    .icon_header {
+                        font-size: 28px;
+                        color: $twitter-logo-color;
+                    }
+                }
+
+                p {
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    color: $text-color;
+                }
+
+                .card_footer {
+                    margin-top: 36px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .likes {
+                        display: flex;
+                        align-items: center;
+                        gap: 7px;
+
+                        font-size: 24px;
+                        color: $text-color;
+
+                        .icon_footer {
+                            color: $like-icon-color;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

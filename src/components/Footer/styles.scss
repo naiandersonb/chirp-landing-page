@@ -1,0 +1,44 @@
+$primary-color: #3180F5;
+$text-color: #000;
+$bg-color: #D7F5F5;
+
+footer {
+    width: 100%;
+    background-color: $bg-color;
+    
+    .container {
+        margin: 0 auto;
+
+        max-width: 1440px;
+        height: 112px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .logo {
+            text-decoration: none;
+            color: $primary-color;
+            font-style: italic;
+    
+            h1 {
+                font-size: 26px;
+                line-height: 31px;
+                font-weight: 700;
+            }
+        }
+
+        .links {
+            display: flex;
+            align-self: center;
+            gap: 35px;
+
+            font-size: 24px;
+            
+            a {
+                color: $text-color;
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+$border-card-color: #D0D0D0;
+$paragraph-color: #878787;
+
+#benefits {
+    width: 100%;
+    min-height: 100vh;
+
+    .container {
+        margin: 112px 0;
+
+        h2 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 58px;
+            max-width: 532px;
+            margin-bottom: 30px;
+        }
+
+        .card_container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            gap: 55px;
+
+            .card {
+
+                border: 1px solid $border-card-color;
+                border-radius: 5px;
+                
+                padding: 40px;
+
+                .icon {
+                    max-width: 92px;
+                    max-height: 92px;
+
+                    display: flex;
+                    align-items: center;
+
+                    padding: 10px 10px 10px 0;
+                    margin-bottom: 28px;
+
+                    img {
+                        width: 50%;
+                    }
+                }
+
+                h3 {
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 29px;
+
+                    margin-bottom: 31px;
+                }
+
+                p {
+                    font-size: 24px;
+                    line-height: 40px;
+                    color: $paragraph-color;
+                }
+            }
+        }
+    }
+}

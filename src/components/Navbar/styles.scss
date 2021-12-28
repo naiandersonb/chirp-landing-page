@@ -1,0 +1,57 @@
+$primary-color: #3180F5;
+$menu-text-color: #595959;
+
+#navbar {
+    height: 150px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    // border: 1px solid rgba(255, 255, 255, 0.3);
+
+    .logo {
+        text-decoration: none;
+        color: $primary-color;
+        font-style: italic;
+
+        h1 {
+            font-size: 26px;
+            line-height: 31px;
+            font-weight: 700;
+        }
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav_links {
+        display: flex;
+        align-items: center;
+        gap: 37px;
+
+        a {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 29px;
+            text-decoration: none;
+            color: $menu-text-color;
+            transition: .5s ease;
+
+            &:nth-child(3) {
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
