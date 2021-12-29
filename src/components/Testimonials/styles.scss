@@ -25,7 +25,6 @@ $text-color: #737373;
             display: flex;
             gap: 25px;
 
-
             .tweet_card {
                 width: 490px;
                 height: 100%;
@@ -107,5 +106,54 @@ $text-color: #737373;
 
             }
         }
+        
+        @media (max-width: 960px) {
+            h2 {
+                font-size: 38px;
+                line-height: 48px;
+            }
+
+            .tweet_container {
+                flex-direction: column;
+
+                .tweet_card {
+                    width: 100%;
+
+                    .card_header {
+                        .avatar {
+                            .avatar_info {
+                                h3 {
+                                    font-size: 20px;
+                                }
+
+                                span {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+
+                        .icon_header {
+                            font-size: 26px;
+                        }
+                    }
+
+                    p {
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+
+                    .card_footer {
+                        .likes {
+                            font-size: 20px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    @media (max-width: 960px) {
+        padding: 100px 20px;
     }
 }

@@ -34,9 +34,9 @@ export function Benefits() {
             <div className="container">
                 <h2>Features that help you Tweet smarter.</h2>
                 <div className="card_container">
-                    {benefits.map(benefit => {
+                    {benefits.map((benefit, index) => {
                         return(
-                            <div className='card'>
+                            <div className='card' key={index} >
                                 <div className="icon">
                                     <img src={benefit.iconUrl} alt="icon" />
                                 </div>

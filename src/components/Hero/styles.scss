@@ -1,10 +1,13 @@
 $primary-color: #3180F5;
 $h1-text-color: #000000;
 $paragraph-text-color: #595959;
+$bg-color-hero: #FBF8F3;
 
 #hero {
     width: 100%;
     padding: 10px;
+
+    background-color: $bg-color-hero;
 
     display: flex;
     align-items: center;
@@ -77,8 +80,12 @@ $paragraph-text-color: #595959;
         align-items: center;
         justify-content: flex-end;
 
-        img {
+        .img_desktop {
             height: 80vh;
+        }
+
+        .img_tablet_mobile {
+            display: none;
         }
     }
 
@@ -95,6 +102,105 @@ $paragraph-text-color: #595959;
             span {
                 color: $primary-color;
                 font-weight: 700;
+            }
+        }
+    }
+
+    @media (max-width: 960px) {
+        flex-direction: column-reverse;
+        padding: 20px;
+
+
+        .hero_content {
+            width: 100%;
+
+            h1 {
+                font-size: 60px;
+            }
+            
+            p {
+                font-size: 20px;
+            }
+
+            .btn_and_learnMore {
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .hero_img {
+            width: 100%;
+
+            .img_desktop {
+                display: none;
+            }
+
+            .img_tablet_mobile {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .user_avatar_description {
+            
+            p {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        flex-direction: column-reverse;
+        padding: 20px;
+
+
+        .hero_content {
+            width: 100%;
+
+            h1 {
+                font-size: 36px;
+                line-height: 43px;
+            }
+            
+            p {
+                font-size: 16px;
+                line-height: 26px;
+            }
+
+            .btn_and_learnMore {
+                flex-direction: column;
+
+                span {
+                    font-size: 20px;
+                }
+
+                button {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .hero_img {
+            width: 100%;
+
+            .img_desktop {
+                display: block;
+                width: 100%;
+            }
+
+            .img_tablet_mobile {
+                display: none;
+                width: 100%;
+            }
+        }
+
+        .user_avatar_description {
+            
+            p {
+                font-size: 16px;
+                line-height: 26px;
             }
         }
     }

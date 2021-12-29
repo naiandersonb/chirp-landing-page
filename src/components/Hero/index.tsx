@@ -51,24 +51,29 @@ export function Hero() {
                     </Link>
                 </div>
                 <div className="users_avatar">
-                    {usersAvatar.map(user => {
+                    {usersAvatar.map((user, index) => {
                         return(
-                            <>
+                            <div key={index}>
                                 <img src={user.imgUrl} alt="user" className='user_hero_img' />
-                            </>
+                            </div>
                         )
                     })}
 
                 </div>
                 <div className="user_avatar_description">
                     <p>
-                        Join <span>195</span> others who have analyzed their fallowers and scheduled <span>1343</span> tweets!
+                        Join <span>195</span> others who have analyzed their followers and scheduled <span>1343</span> tweets!
                     </p>
                 </div>
             </div>
+
             <div className="hero_img">
-                <img src={require('../../images/HeroImageDesktop.png')} alt="" />
+                <img className='img_desktop' src={require('../../images/HeroImageDesktop.png')} alt="desktop banner" />
+                
+                <img className='img_tablet_mobile' src={require('../../images/HeroImageTablet.png')} alt="desktop tablet / mobile" />
+
             </div>
+        
         </main>
     )
 }

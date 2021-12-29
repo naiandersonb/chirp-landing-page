@@ -35,7 +35,7 @@ $card-border-bottom-color: #CECECE;
         }
 
         .price_card {
-            width: 717px;
+            max-width: 717px;
             padding: 53px;
             margin-top: 80px;
 
@@ -83,15 +83,17 @@ $card-border-bottom-color: #CECECE;
                     padding: 10px 0;
 
                     .check_icon {
+                        min-width: 30px;
+                        min-height: 30px;
                         font-size: 24px;
                         color: $check-icon-color;
                     }
 
-                     p{
+                    p {
                         font-size: 20px;
                         line-height: 47px;
                         color: $text-color;
-                     }
+                    }
                 }
             }
 
@@ -100,5 +102,48 @@ $card-border-bottom-color: #CECECE;
             }
 
         }
+
+        @media (max-width: 960px) {
+            h2 {
+                font-size: 38px;
+                line-height: 48px;
+            }
+
+            .subtitle {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .price_card {
+                max-width: 717px;
+
+                .card_header {
+                    p {
+                        font-size: 26px;
+                    }
+
+                    .price {
+                        h3 {
+                            font-size: 64px;
+                        }
+
+                        span {
+                            font-size: 26px;
+                        }
+                    }
+                }
+                .card_body {
+                    .body_content {
+                        p {
+                            line-height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 960px) {
+        padding: 100px 20px;
     }
 }

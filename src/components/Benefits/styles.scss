@@ -25,7 +25,7 @@ $paragraph-color: #878787;
 
                 border: 1px solid $border-card-color;
                 border-radius: 5px;
-                
+
                 padding: 40px;
 
                 .icon {
@@ -57,6 +57,43 @@ $paragraph-color: #878787;
                     color: $paragraph-color;
                 }
             }
+        }
+
+        @media (max-width: 960px) {
+            padding: 20px;
+            
+            h2 {
+                font-size: 36px;
+                line-height: 48px;
+            }
+
+            .card_container {
+                grid-template-columns: 100%;
+
+                .card {
+                    h3 {
+                        font-size: 20px;
+                        line-height: 25px;
+                    }
+                    
+                    p {
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 500px) {
+            h2 {
+                font-size: 36px;
+                line-height: 43px;
+            }
+            
+        }
+
+        @media (max-width: 500px) {
+            margin: 70px 0;
         }
     }
 }

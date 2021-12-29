@@ -39,9 +39,9 @@ export function Testimonials() {
             <div className="container">
                 <h2>What our customers say</h2>
                 <div className="tweet_container">
-                    {testimonials.map(testimonial =>{
+                    {testimonials.map((testimonial, index) =>{
                         return(
-                            <div className='tweet_card'>
+                            <div className='tweet_card' key={index} >
                                 <div className="card_header">
                                     <div className="avatar">
                                         <img src={testimonial.avatar} alt="avatar" />

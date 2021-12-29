@@ -1,5 +1,7 @@
 $primary-color: #3180F5;
 $menu-text-color: #595959;
+$drop-shadow-color: #e9f1f1;
+$bg-color-container: #FBF8F3;
 
 #navbar {
     height: 150px;
@@ -9,12 +11,6 @@ $menu-text-color: #595959;
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(255, 255, 255, 0.17);
-    border-radius: 16px;
-    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.9px);
-    -webkit-backdrop-filter: blur(5.9px);
-    // border: 1px solid rgba(255, 255, 255, 0.3);
 
     .logo {
         text-decoration: none;
@@ -51,6 +47,60 @@ $menu-text-color: #595959;
 
             &:hover {
                 color: $primary-color;
+            }
+        }
+    }
+
+    @media screen and (max-width: 980px) {
+        padding: 0 20px;
+        
+        .hamburger {
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            position: fixed;
+            top: 50px;
+            right: 20px;
+
+            background-color: $bg-color-container;
+            border: 1px solid darken($bg-color-container, 10);
+            padding: 10px;
+            border-radius: 10px;
+
+            font-size: 30px;
+            cursor: pointer;
+
+            filter: drop-shadow(-5px 11px 10px darken($drop-shadow-color, 5));
+
+            transition: .5s ease;
+        }
+
+        .nav_links {
+            
+            flex-direction: column;
+            
+            height: 100vh;
+            background-color: aliceblue;
+            filter: drop-shadow(-5px 11px 10px rgba(147, 158, 170, 0.555));
+            
+            margin: 0;
+            
+            width: 100%;
+            max-width: 450px;
+            
+            padding: 150px 20px;
+            transition: all 0.5s ease;
+            
+            position: fixed;
+            top: 0;
+            right: -500px;
+
+            
+            &.active {
+                right: 0;                
+                z-index: 888;
             }
         }
     }

@@ -27,16 +27,16 @@ export function Navbar() {
                 'nav_links', 
                 { active: activeMenuMobile }
             )} >
-                <Link to='/'>
+                <Link to='/' onClick={handleActiveMenuMobile}>
                     Home
                 </Link>
-                <Link to='#'>
+                <Link to='#price' onClick={handleActiveMenuMobile}>
                     Pricing
                 </Link>
-                <Link to='#'>
+                <Link to='#' onClick={handleActiveMenuMobile}>
                     faq
                 </Link>
-                <Link to='#'>
+                <Link to='#' onClick={handleActiveMenuMobile}>
                     <Button/>
                 </Link>
             </nav>
