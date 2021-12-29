@@ -5,7 +5,7 @@ import './styles.scss';
 
 export function Price() {
     return(
-        <section id="price">
+        <section id="price" title='price'>
             <div className="container">
                 <h2>One simple price plan</h2>
                 <p className='subtitle'>Start growing your Twitter account by analyzing your follower's patterns.</p>

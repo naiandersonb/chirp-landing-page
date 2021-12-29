@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import cx from 'classnames';
@@ -30,9 +31,9 @@ export function Navbar() {
                 <Link to='/' onClick={handleActiveMenuMobile}>
                     Home
                 </Link>
-                <Link to='#price' onClick={handleActiveMenuMobile}>
+                <ScrollLink to='price' smooth={true} onClick={handleActiveMenuMobile}>
                     Pricing
-                </Link>
+                </ScrollLink>
                 <Link to='#' onClick={handleActiveMenuMobile}>
                     faq
                 </Link>

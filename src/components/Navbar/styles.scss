@@ -38,8 +38,10 @@ $bg-color-container: #FBF8F3;
             font-weight: 400;
             line-height: 29px;
             text-decoration: none;
+            
             color: $menu-text-color;
             transition: .5s ease;
+            cursor: pointer;
 
             &:nth-child(3) {
                 text-transform: uppercase;
