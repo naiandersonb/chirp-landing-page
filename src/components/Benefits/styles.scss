@@ -6,7 +6,8 @@ $paragraph-color: #878787;
     min-height: 100vh;
 
     .container {
-        margin: 112px 0;
+        max-width: 1440px;
+        margin: 112px auto;
 
         h2 {
             font-size: 48px;
@@ -17,12 +18,13 @@ $paragraph-color: #878787;
         }
 
         .card_container {
+            width: 100%;
             display: grid;
             grid-template-columns: 50% 50%;
             gap: 55px;
 
             .card {
-
+                width: 100%;
                 border: 1px solid $border-card-color;
                 border-radius: 5px;
 

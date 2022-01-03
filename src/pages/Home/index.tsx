@@ -11,14 +11,12 @@ export function Home() {
     return (
         <section id="home">
             <div className="container_hero">
-                <div className="container_hero_content">
-                    <Navbar />
-                    <Hero />
-                    <Benefits />
-                </div>
+                <Navbar />
+                <Hero />
+                <Benefits />
                 <Testimonials />
-                <Price/>
-                <Footer/>
+                <Price />
+                <Footer />
             </div>
         </section>
     )

@@ -9,199 +9,209 @@ $bg-color-hero: #FBF8F3;
 
     background-color: $bg-color-hero;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-
-    .hero_content {
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-
-        padding: 10px 0;
-
-        h1 {
-            font-size: 74px;
-            font-weight: 700;
-            line-height: 90px;
-            
-            color: $h1-text-color;
-            max-width: 788px;
-            margin-bottom: 20px;
-        }
-        
-        p {
-            font-size: 24px;
-            line-height: 39px;
-            font-weight: 400;
-            
-            color: $paragraph-text-color;
-            max-width: 788px;
-            margin-bottom: 20px;
-        }
-
-        .btn_and_learnMore {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-
-            button {
-                max-width: 340px;
-            }
-
-            a {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-
-                text-decoration: none;
-                font-weight: 700;
-                font-size: 24px;
-                color: $primary-color;
-            }
-        }
-
-        .users_avatar {
-            margin: 20px 0;
-            display: flex;
-            align-items: flex-start;
-            
-            img {
-                margin-right: -25px;
-            }
-
-        }
-    }
-
-    .hero_img {
-        width: 40%;
+    .hero_container {
+        max-width: 1440px;
+        margin: 0 auto;
+    
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
+        gap: 30px;
 
-        .img_desktop {
-            height: 80vh;
-        }
+        .hero_content {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
 
-        .img_tablet_mobile {
-            display: none;
-        }
-    }
+            padding: 10px 0;
 
-    .user_avatar_description {
-        
-        p {
-            font-size: 24px;
-            line-height: 39px;
-            font-weight: 400;
-            
-            max-width: 642px;
-            color: $paragraph-text-color;
-
-            span {
-                color: $primary-color;
+            h1 {
+                font-size: 74px;
                 font-weight: 700;
+                line-height: 90px;
+
+                color: $h1-text-color;
+                max-width: 788px;
+                margin-bottom: 20px;
             }
-        }
-    }
 
-    @media (max-width: 960px) {
-        flex-direction: column-reverse;
-        padding: 20px;
-
-
-        .hero_content {
-            width: 100%;
-
-            h1 {
-                font-size: 60px;
-            }
-            
             p {
-                font-size: 20px;
+                font-size: 24px;
+                line-height: 39px;
+                font-weight: 400;
+
+                color: $paragraph-text-color;
+                max-width: 788px;
+                margin-bottom: 20px;
             }
 
             .btn_and_learnMore {
-                span {
-                    font-size: 20px;
-                }
-            }
-        }
-
-        .hero_img {
-            width: 100%;
-
-            .img_desktop {
-                display: none;
-            }
-
-            .img_tablet_mobile {
-                display: block;
-                width: 100%;
-            }
-        }
-
-        .user_avatar_description {
-            
-            p {
-                font-size: 20px;
-                line-height: 30px;
-            }
-        }
-    }
-
-    @media (max-width: 500px) {
-        flex-direction: column-reverse;
-        padding: 20px;
-
-
-        .hero_content {
-            width: 100%;
-
-            h1 {
-                font-size: 36px;
-                line-height: 43px;
-            }
-            
-            p {
-                font-size: 16px;
-                line-height: 26px;
-            }
-
-            .btn_and_learnMore {
-                flex-direction: column;
-
-                span {
-                    font-size: 20px;
-                }
+                display: flex;
+                align-items: center;
+                gap: 25px;
 
                 button {
-                    max-width: 100%;
+                    max-width: 340px;
                 }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: $primary-color;
+                }
+            }
+
+            .users_avatar {
+                margin: 20px 0;
+                display: flex;
+                align-items: flex-start;
+
+                img {
+                    margin-right: -25px;
+                }
+
             }
         }
 
         .hero_img {
-            width: 100%;
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
 
             .img_desktop {
-                display: block;
-                width: 100%;
+                // height: 80vh;
+                width: 90%;
             }
 
             .img_tablet_mobile {
                 display: none;
-                width: 100%;
             }
         }
 
         .user_avatar_description {
-            
+
             p {
-                font-size: 16px;
-                line-height: 26px;
+                font-size: 24px;
+                line-height: 39px;
+                font-weight: 400;
+
+                max-width: 642px;
+                color: $paragraph-text-color;
+
+                span {
+                    color: $primary-color;
+                    font-weight: 700;
+                }
             }
         }
+
+        @media (max-width: 960px) {
+            flex-direction: column-reverse;
+            padding: 20px;
+
+
+            .hero_content {
+                width: 100%;
+
+                h1 {
+                    font-size: 60px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+
+                .btn_and_learnMore {
+                    span {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .hero_img {
+                width: 100%;
+
+                .img_desktop {
+                    display: none;
+                }
+
+                .img_tablet_mobile {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            .user_avatar_description {
+
+                p {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+        }
+
+        @media (max-width: 500px) {
+            flex-direction: column-reverse;
+            padding: 20px;
+
+
+            .hero_content {
+                width: 100%;
+
+                h1 {
+                    font-size: 36px;
+                    line-height: 43px;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+
+                .btn_and_learnMore {
+                    flex-direction: column;
+
+                    span {
+                        font-size: 20px;
+                    }
+
+                    button {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .hero_img {
+                width: 100%;
+                // height: 100%;
+
+                .img_desktop {
+                    display: block;
+                    width: 100%;
+                }
+
+                .img_tablet_mobile {
+                    display: none;
+                    width: 100%;
+                }
+            }
+
+            .user_avatar_description {
+
+                p {
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+            }
+        }
+
+
     }
+
 }

@@ -16,31 +16,34 @@ export function Navbar() {
         setActiveMenuMobile(!activeMenuMobile);
     }
 
-    return(
+    return (
         <header id="navbar">
-            <Link to='/' className='logo'>
-                <h2>Chirp.</h2>
-            </Link>
-            <div className="hamburger" onClick={handleActiveMenuMobile}>
-                {activeMenuMobile ? <AiOutlineClose/> : <AiOutlineMenu/> }
+            <div className="navbar_container">
+                <Link to='/' className='logo'>
+                    <h2>Chirp.</h2>
+                </Link>
+                <div className="hamburger" onClick={handleActiveMenuMobile}>
+                    {activeMenuMobile ? <AiOutlineClose /> : <AiOutlineMenu />}
+                </div>
+                <nav className={cx(
+                    'nav_links',
+                    { active: activeMenuMobile }
+                )} >
+                    <ScrollLink to='hero' onClick={handleActiveMenuMobile}>
+                        Home
+                    </ScrollLink>
+                    <ScrollLink to='price' smooth={true} onClick={handleActiveMenuMobile}>
+                        Pricing
+                    </ScrollLink>
+                    <Link to='#' onClick={handleActiveMenuMobile}>
+                        faq
+                    </Link>
+                    <Link to='#' onClick={handleActiveMenuMobile}>
+                        <Button />
+                    </Link>
+                </nav>
+
             </div>
-            <nav className={cx(
-                'nav_links', 
-                { active: activeMenuMobile }
-            )} >
-                <Link to='/' onClick={handleActiveMenuMobile}>
-                    Home
-                </Link>
-                <ScrollLink to='price' smooth={true} onClick={handleActiveMenuMobile}>
-                    Pricing
-                </ScrollLink>
-                <Link to='#' onClick={handleActiveMenuMobile}>
-                    faq
-                </Link>
-                <Link to='#' onClick={handleActiveMenuMobile}>
-                    <Button/>
-                </Link>
-            </nav>
         </header>
     )
 }
